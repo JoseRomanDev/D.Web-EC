@@ -5,6 +5,7 @@
 <p>Js</h3> --> NodeJS --> ExpressJs </p>
 <p>Angular</p>
 <p>Microservicios</p>
+<p>Depuración</p>
 
 
 
