@@ -57,9 +57,11 @@ export const removeBaratheonAndGreyjoy = () => {
  * @returns array with items removes
  */
 export const removeArryn = () => {
-  return got.splice(5,1);
- 
-  
+  // Find index of "Arryn" in case previous operations changed the array
+  const idx = got.indexOf("Arryn");
+  if (idx === -1) return [];
+  // splice returns an array with the removed element(s)
+  return got.splice(idx, 1);
 };
 
 /******************************************************/
@@ -79,7 +81,7 @@ export const narutoCharacters = [
  * @returns the index found.
  */
 export const getNaruto = () => {
- return narutoCharacters.findIndexOf("Naruto");
+ return narutoCharacters.findIndex(element => element === "Naruto");
 };
 
 /**
@@ -87,7 +89,7 @@ export const getNaruto = () => {
  * @returns the index found.
  */
 export const getGaara = () => {
-  return narutoCharacters.findIndexOf("Gaara");
+  return narutoCharacters.findIndex(element => element === "Gaara");
 };
 
 /**
@@ -95,7 +97,7 @@ export const getGaara = () => {
  * @returns the index found.
  */
 export const getRockLee = () => {
-  return narutoCharacters.findIndex("Rock Lee")
+  return narutoCharacters.findIndex(element => element === "Rock Lee")
 };
 
 /**
