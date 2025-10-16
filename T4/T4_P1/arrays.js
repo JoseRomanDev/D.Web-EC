@@ -57,11 +57,7 @@ export const removeBaratheonAndGreyjoy = () => {
  * @returns array with items removes
  */
 export const removeArryn = () => {
-  // Find index of "Arryn" in case previous operations changed the array
-  const idx = got.indexOf("Arryn");
-  if (idx === -1) return [];
-  // splice returns an array with the removed element(s)
-  return got.splice(idx, 1);
+  
 };
 
 /******************************************************/
