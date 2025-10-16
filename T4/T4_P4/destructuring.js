@@ -100,6 +100,6 @@ return published;
  * @returns
  */
 export const getAuthorsAndTitleLastBook = () => {
-  let [{ title, author}, ] = books;
+  let [, , , { title, author}  ] = books;
   return [title , author];
 };
