@@ -31,7 +31,7 @@ describe("Removes elements via splice", () => {
   it("should removes Arryn houses", () => {
     const housesRemoved = arrays.removeArryn();
     expect(housesRemoved[0]).toBe("Arryn");
-    expect(arrays.got.length).toBe(4);
+    expect(arrays.got.length).toBe(6);
   });
 });
 

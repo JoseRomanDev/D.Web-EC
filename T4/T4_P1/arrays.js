@@ -57,7 +57,7 @@ export const removeBaratheonAndGreyjoy = () => {
  * @returns array with items removes
  */
 export const removeArryn = () => {
-  
+  return got.splice(5,1);
 };
 
 /******************************************************/

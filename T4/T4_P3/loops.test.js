@@ -1,4 +1,4 @@
-import * as loops from "./loops_solution";
+import * as loops from "./loops.js";
 
 describe("loops for, do while and while", () => {
   it("should returns ['Juan', 'María', 'Carlos', 'Luisa', 'Ana'] with For", () => {
