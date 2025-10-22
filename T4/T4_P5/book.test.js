@@ -1,6 +1,6 @@
 import Book from './book.js';
 
-describe("OOP", () => {
+describe("OOP Books", () => {
 
   it("should gets title, author and published for La vida del lazarillo de Tormes", () => {
     const firstbook= new Book("La vida del lazarillo de Tormes", "Anonymous", "1554");
