@@ -1,17 +1,19 @@
 //** spread operator **//
 
 export const mergeArrays = (array1, array2) => {
-    return array3 = [...array1, ...array2];
+     let array3 = [...array1, ...array2];
+     return array3;
 };
 
 export const mergeObject = (obj1, obj2) => {
-    return mergedObject = [...obj1, ...obj2]; 
+    let mergedObject = [...obj2, ...obj1];
+    return mergedObject; 
 };
 
 //** String templates **//
 
 export const concatInfoPerson = (name, age, place) => {
-     let text = `${name} tiene ${age} y vive en ${place}.`
+     let text = `${name} tiene ${age} años y vive en ${place}`
      return text;
 };
 
@@ -19,7 +21,7 @@ export const concatInfoPerson = (name, age, place) => {
 //"Ana tiene 30 años y vive en Barcelona"
 
 export const generateInvoice = (producto, precio, cantidad) => {
-let text = `Producto: ${producto}, Precio unitario: ${precio}, Cantidad: ${cantidad}, Total a pagar: ${precio * cantidad}.`
+let text = `Producto: ${producto}, Precio unitario: ${precio}€, Cantidad: ${cantidad}, Total a pagar: ${precio * cantidad}€`
 return text;
 };
 
