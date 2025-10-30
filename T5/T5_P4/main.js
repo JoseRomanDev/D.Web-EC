@@ -18,14 +18,18 @@ const UL = document.createElement("ul");
 let keysP = Object.keys(product)
 let ValP = Object.values(product)
 
-keysP.forEach((Item, Index) => {
+keysP.forEach((Item, index) => {
     if (Item === "Review"){
-        CreateReviewItem(ValP[Index],UL);
+        CreateReviewItem(ValP[index],UL);
     } else {
         let li = document.createElement("li");
         let p = document.createElement("p");
         p.textContent = 
             Item === "price"
-            ? `${Item} = ${ValP[index].currentPrice}`
+            ? `${Item} = ${ValP[index].currentPrice} ${valP[index].currency}`
+            : `${Item} = ${ValP[index]}`
+        li.appendChild(p);
+        UL.appendChild(li);
     }});
+    MAIN.appendChild(UL);
 
