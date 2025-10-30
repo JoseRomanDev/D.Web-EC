@@ -1,6 +1,7 @@
 import {Price} from "./classes/price";
 import { Review } from "./classes/review";
 import { Product } from "./classes/product";
+import { CreateReviewItem } from "./utils/DOM_Helper";
 
 let price = new Price("USD", 399.0);
 let review = new Review(4.6, 73);
