@@ -17,6 +17,6 @@ let a = document.createElement("a");
 a.href = "#";
 a.classList = classes;
 a.textContent = "A simple default list group item"
+document.body.append(a);
 })
 
-document.body.append(a);
