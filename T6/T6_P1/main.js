@@ -1,5 +1,6 @@
 import { objectParseToStr } from "./util";
-import { people } from "./classes"
+import { people } from "./mockdata"
+
 
 objectParseToStr(people)
 .then((result)=>{
