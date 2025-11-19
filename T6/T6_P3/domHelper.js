@@ -51,35 +51,36 @@ if(previousRadio && previousRadio !== newRadio){
     previousRadio.checked = false;
 }
 previousRadio = newRadio;
-const cardsGridContainer = document.querySelector(".card-grid")
-cardsGridContainer.innerHTML = "";
+const cardsGridContainer = document.querySelector(".cards-grid")
+cardsGridContainer.innerHTML = '';
 
 fetchCarDataMakers(newRadio.value).then((data) =>{
     data.forEach(card => {
         cardsGridContainer.appendChild(newCard(card))
     });
+}).catch(err => {
+    console.error('Error fetching cars:', err);
 });
 }
 
 export const containerRadioGroup = (make, cardsGrid) =>{
     const container = document.createElement ("div");
     container.className = "radio-group"
-    make.forEach((make,index) =>{
+    make.forEach((makeValue,index) =>{
         const label = newLabel("radio-label");
-        const input = newInput(make);
+        const input = newInput(makeValue);
         if(index === 0){
             input.checked = true;
             previousRadio = input;
-            setTimeout(()=>{
-                fetchCarDataMakers(input.make).then((data)=>{
-                    data.forEach(card=>{
-                        cardsGrid.appendChild(newCard(card));
-                    });
+            fetchCarDataMakers(input.value).then((data)=>{
+                cardsGrid.innerHTML = '';
+                data.forEach(card=>{
+                    cardsGrid.appendChild(newCard(card));
                 });
-            }, 1000);
+            }).catch(err => console.error('Error fetching initial cars:', err));
         }
         input.addEventListener("change", () => newRadioSelected(input));
-        const span = newSpan(make);
+        const span = newSpan(makeValue);
         label.append(input,span);
         container.appendChild(label);
     });
