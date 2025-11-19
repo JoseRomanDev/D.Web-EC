@@ -1,5 +1,5 @@
-import { fetchCarMakers } from "./apiServices";
-import { containerRadioGroup } from "./DomHelper";
+import {  fetchCarMakers } from './apiServices.js';
+import { containerRadioGroup } from "./domHelper.js";
 
 let makes;
 
