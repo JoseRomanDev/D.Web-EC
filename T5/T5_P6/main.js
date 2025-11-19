@@ -33,4 +33,3 @@ arrayDeBotones[4].addEventListener("mouseout",mouseOut)
 arrayDeBotones[5].addEventListener("click",bgChange);
 arrayDeBotones[6].addEventListener("click", bgBase);
 arrayDeBotones[7].addEventListener("click", allBlck);
-arrayDeBotones[7]
