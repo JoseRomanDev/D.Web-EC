@@ -1,5 +1,4 @@
 import Person from "./classes/Person";
-//Creo la funcion donde vamos a utilizar la promesa
 export const objectParseToStr = (people) =>{
     return new Promise((resolve,reject) =>{
         if(
