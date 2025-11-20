@@ -1,4 +1,4 @@
-const URL_CARS = "https://car-data.p.rapidapi.com/cars?limit=8&page=0&make=";
+const URL_CARS = "https://car-data.p.rapidapi.com/cars?limit=10&page=0&make=";
 const URL_MAKES = "https://car-data.p.rapidapi.com/cars/makes";
 const options = {
   method: "GET",

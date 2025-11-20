@@ -51,21 +51,18 @@ if(previousRadio && previousRadio !== newRadio){
     previousRadio.checked = false;
 }
 previousRadio = newRadio;
-const cardsGridContainer = document.querySelector(".cards-grid")
+const cardsGridContainer = document.querySelector(".card-grid");
 cardsGridContainer.innerHTML = '';
 
 fetchCarDataMakers(newRadio.value).then((data) =>{
     data.forEach(card => {
         cardsGridContainer.appendChild(newCard(card))
     });
-}).catch(err => {
-    console.error('Error fetching cars:', err);
 });
 }
 
 export const containerRadioGroup = (make, cardsGrid) =>{
-    const container = document.createElement ("div");
-    container.className = "radio-group"
+    const container = document.querySelector(".radio-group");
     make.forEach((makeValue,index) =>{
         const label = newLabel("radio-label");
         const input = newInput(makeValue);
@@ -77,7 +74,7 @@ export const containerRadioGroup = (make, cardsGrid) =>{
                 data.forEach(card=>{
                     cardsGrid.appendChild(newCard(card));
                 });
-            }).catch(err => console.error('Error fetching initial cars:', err));
+            },1000 );
         }
         input.addEventListener("change", () => newRadioSelected(input));
         const span = newSpan(makeValue);
